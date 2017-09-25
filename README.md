@@ -2,6 +2,8 @@
 **AOT/JIT** compatible Angular component to embed Gist
 
 # Quick Start
+
+```bash
 # Clone the repository
 git clone https://github.com/iwannabebot/ng-gist.git
 
@@ -13,7 +15,7 @@ yarn install
 
 # Build the library
 yarn build
-
+```
 ## Build the library
 - `yarn build` for building the library once (both ESM and AOT versions).
 - `yarn build:watch` for building the library (both ESM and AOT versions) and watch for file changes.
