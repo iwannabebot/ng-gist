@@ -1,24 +1,13 @@
 import { NgGistService } from './ng-gist.service';
 
 describe('NgGistService', () => {
-  let NgGistService: NgGistService;
+  let url: string;
 
   beforeEach(() => {
-    NgGistService = new NgGistService();
+    url = NgGistService.getUrl('iwannabebot','134aee6d3a07430e9a1079697e4fc03d');
   });
 
-  it('should return observable with time string', (done) => {
-    const timeStringFormat = /[0-9]{2}:[0-9]{2}:[0-9]{2}/i;
-
-    NgGistService.getTick().subscribe(
-      (timeString) => {
-        expect(timeStringFormat.test(timeString)).toBeTruthy(
-          'Time string should have hh:mm:ss format'
-        );
-
-        // Stop asynchronous test.
-        done();
-      }
-    );
+  it('should return a valid url', () => {
+    expect(url.indexOf('https://gist.github.com')>-1).toBeTruthy();
   });
 });

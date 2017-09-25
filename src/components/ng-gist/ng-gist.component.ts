@@ -7,24 +7,34 @@ import { NgGistService } from '../../services';
   styleUrls: ['./ng-gist.component.scss'],
   templateUrl: './ng-gist.component.html',
 })
+/**
+ * NgGistComponent
+ */
 export class NgGistComponent implements AfterViewInit {
 
-  @Input("Username") userName : string;
-  @Input("GistId") gistId : string;
+  /**
+   * Username
+   */
+  @Input('Username') public userName: string;
+  
+  /**
+   * GistId
+   */
+  @Input('GistId') public gistId: string;
 
-  @ViewChild('gistIframe') gistIframe:ElementRef;
+  /**
+   * Element refernce to iFrame hosting Gist
+   */
+  @ViewChild('gistIframe') public gistIframe: ElementRef;
+  constructor() {}
   
-  constructor(private _NgGistService : NgGistService) {
-    
-  }
-  
-  ngAfterViewInit() {
-    let iFrame = this.gistIframe.nativeElement;
-    let url = this._NgGistService.getUrl(this.userName, this.gistId);
-    let elementId = `gist-${this.userName}-${this.gistId}`;
-    let content = this._NgGistService.getGistFrameContent(url, elementId);
+  public ngAfterViewInit() {
+    const iFrame = this.gistIframe.nativeElement;
+    const url = NgGistService.getUrl(this.userName, this.gistId);
+    const elementId = `gist-${this.userName}-${this.gistId}`;
+    const content = NgGistService.getGistFrameContent(url, elementId);
     iFrame.id = elementId;
-    let doc = iFrame.contentDocument || iFrame.contentElement.contentWindow;
+    const doc = iFrame.contentDocument || iFrame.contentElement.contentWindow;
     doc.open();
     doc.write(content);
     doc.close();

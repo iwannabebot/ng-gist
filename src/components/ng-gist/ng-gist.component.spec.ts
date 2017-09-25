@@ -28,22 +28,4 @@ describe('NgGistComponent', () => {
     componentFixture = TestBed.createComponent(NgGistComponent);
     componentInstance = componentFixture.componentInstance;
   });
-
-  it('should display time string', (done) => {
-    componentFixture.detectChanges();
-
-    setInterval(() => {
-      componentFixture.detectChanges();
-
-      const NgGistPageElement = componentFixture.debugElement.queryAll(By.css('.ng-gist-time'));
-      const displayedTimeText = NgGistPageElement[0].nativeElement.innerText;
-
-      expect(NgGistPageElement).toBeDefined();
-      expect(NgGistPageElement.length).toEqual(1);
-      expect(displayedTimeText.length).toEqual(8);
-      expect(timeStringFormat.test(displayedTimeText)).toBeTruthy();
-
-      done();
-    }, 1000);
-  });
 });
