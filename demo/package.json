@@ -1,7 +1,7 @@
 {
   "name": "ng-gist-demo",
-  "version": "0.0.0",
-  "description": "AOT/JIT/UMD build demo of ng-gist",
+  "description": "AOT/JIT/UMD build demo of angular library seed",
+  "license": "MIT",
   "scripts": {
     "build": "npm run build:aot && npm run build:jit && npm run build:umd",
     "build:aot": "npm run build:aot:compile && npm run build:aot:bundle",
@@ -21,7 +21,6 @@
     "prestart": "npm run clean:esm:jit && npm run copy-lib",
     "start": "concurrently --raw \"gulp copy-lib:watch\" \"webpack-dev-server --open --watch --config esm/webpack.config.js\""
   },
-  "license": "MIT",
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/core": "^4.0.0",

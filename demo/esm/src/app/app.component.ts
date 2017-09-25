@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<ng-gist Username="dhagz" GistId="24df5eefb26350a9298777313195ab44"></ng-gist>`
+  template: `<ng-gist Username="iwannabebot" GistId="134aee6d3a07430e9a1079697e4fc03d"></ng-gist>`
 })
 export class AppComponent {
-  public header: string = 'UMD Demo';
 }

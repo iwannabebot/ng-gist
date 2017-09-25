@@ -16,7 +16,7 @@ export class NgGistService {
         <head>
           <base target="_parent">
         </head>
-        <body onload="parent.document.getElementById('${elementId}') style.height=document.body.scrollHeight + 'px'">
+        <body onload="parent.document.getElementById('${elementId}')" style.height=document.body.scrollHeight + 'px'">
           <script type="text/javascript" src="${gistUrl}"></script>
         </body>
       </html>

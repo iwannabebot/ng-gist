@@ -44,7 +44,7 @@ const config = {
      */
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.ejs'),
-      title: 'Angular Library Starter',
+      title: 'Ng Gist Starter',
       inject: 'body'
     }),
 
@@ -87,7 +87,7 @@ const config = {
   ],
 
   devServer: {
-    port: 4600,
+    port: 8000,
     historyApiFallback: true,
     watchOptions: {
       aggregateTimeout: 300,
