@@ -47,7 +47,7 @@
   "bugs": {
     "url": "https://github.com/iwannabebot/ng-gist/issues"
   },
-  "homepage": "https://github.com/iwannabebot/ng-gist#readme",
+  "homepage": "https://github.com/iwannabebot/ng-gist#ng-gist",
   "dependencies": {},
   "peerDependencies": {
     "@angular/common": "^4.0.0",
