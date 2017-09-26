@@ -36,7 +36,7 @@ export class NgGistComponent implements AfterViewInit {
     this.LoadGist(this.gistIframe);
   }
 
-  private LoadGist(gistElement : ElementRef): void {
+  private LoadGist(gistElement: ElementRef): void {
     const iFrame = gistElement.nativeElement;
     const url = NgGistService.getUrl(this.userName, this.gistId, this.fileName);
     iFrame.id = this.GetElementId();
