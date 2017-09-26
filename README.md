@@ -1,7 +1,9 @@
 # ng-gist
 **AOT/JIT** compatible Angular component to embed Gist
 
+[![Build Status](https://travis-ci.org/iwannabebot/ng-gist.svg?branch=master)](https://travis-ci.org/iwannabebot/ng-gist)
 
+[![codecov](https://codecov.io/gh/iwannabebot/ng-gist/branch/master/graph/badge.svg)](https://codecov.io/gh/iwannabebot/ng-gist)
 
 # Quick Start 
 
@@ -11,8 +13,8 @@
 
  - Declare NgGistModule in your root module
 
-```import { NgGistModule } from 'ng-gist'
-
+```
+import { NgGistModule } from 'ng-gist'
 @NgModule({
   declarations: [
     AppComponent
