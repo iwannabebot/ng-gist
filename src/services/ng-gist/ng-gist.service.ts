@@ -6,14 +6,10 @@ import { Observable } from 'rxjs/Rx';
  */
 @Injectable()
 export class NgGistService {
-
-  constructor() {
-  }
-
   /**
    * Return gist url after combining url and gist id
-   * @param userName 
-   * @param gistId 
+   * @param userName
+   * @param gistId
    */
   public static getUrl(userName: string, gistId: string): string {
     return `https://gist.github.com/${userName}/${gistId}.js`;
@@ -21,8 +17,8 @@ export class NgGistService {
 
   /**
    * Return standalone Gist content hosted in an iFrame
-   * @param gistUrl 
-   * @param elementId 
+   * @param gistUrl
+   * @param elementId
    */
   public static getGistFrameContent(gistUrl: string, elementId: string): string {
     return `<html>` +

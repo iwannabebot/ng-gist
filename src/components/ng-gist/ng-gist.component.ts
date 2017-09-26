@@ -15,19 +15,18 @@ export class NgGistComponent implements AfterViewInit {
   /**
    * Username
    */
-  @Input('Username') public userName: string;
-  
+  @Input() public userName: string;
+
   /**
    * GistId
    */
-  @Input('GistId') public gistId: string;
+  @Input() public gistId: string;
 
   /**
    * Element refernce to iFrame hosting Gist
    */
   @ViewChild('gistIframe') public gistIframe: ElementRef;
-  constructor() {}
-  
+
   public ngAfterViewInit() {
     const iFrame = this.gistIframe.nativeElement;
     const url = NgGistService.getUrl(this.userName, this.gistId);
