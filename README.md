@@ -1,11 +1,13 @@
 # ng-gist
 **AOT/JIT** compatible Angular component to embed Gist
 
+
+
 # Quick Start 
 
  - Install this Library
 
-`npm i --save ng-gist`
+[![NPM](https://nodei.co/npm/ng-gist.png?mini=true)](https://npmjs.org/package/ng-gist)
 
  - Declare NgGistModule in your root module
 
