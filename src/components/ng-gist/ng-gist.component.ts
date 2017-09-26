@@ -33,11 +33,11 @@ export class NgGistComponent implements AfterViewInit {
   @ViewChild('gistIframe') public gistIframe: ElementRef;
 
   public ngAfterViewInit() {
-    this.LoadGist(this.gistIframe.nativeElement);
+    this.LoadGist(this.gistIframe);
   }
 
-  private LoadGist(gistElement): void {
-    const iFrame = gistElement;
+  private LoadGist(gistElement : ElementRef): void {
+    const iFrame = gistElement.nativeElement;
     const url = NgGistService.getUrl(this.userName, this.gistId, this.fileName);
     iFrame.id = this.GetElementId();
     const content = NgGistService.getGistFrameContent(url, this.GetElementId());
