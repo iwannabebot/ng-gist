@@ -1,7 +1,34 @@
 # ng-gist
 **AOT/JIT** compatible Angular component to embed Gist
 
-# Quick Start
+# Quick Start 
+
+ - Install this Library
+
+`npm i --save ng-gist`
+
+ - Declare NgGistModule in your root module
+
+```import { NgGistModule } from 'ng-gist'
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgGistModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+ - Use ng-gist template
+
+ `<ng-gist userName="iwannabebot"  gistId="134aee6d3a07430e9a1079697e4fc03d"></ng-gist>`
+
+# Modify this library 
 
 ```bash
 # Clone the repository
