@@ -15,17 +15,17 @@ export class NgGistComponent implements AfterViewInit {
   /**
    * Username
    */
-  @Input() public userName: string = "";
+  @Input() public userName: string = '';
 
   /**
    * GistId
    */
-  @Input() public gistId: string = "";
+  @Input() public gistId: string = '';
 
   /**
    * Filename
    */
-  @Input() public fileName: string = "";
+  @Input() public fileName: string = '';
 
   /**
    * Element refernce to iFrame hosting Gist
@@ -36,7 +36,7 @@ export class NgGistComponent implements AfterViewInit {
     this.LoadGist(this.gistIframe.nativeElement);
   }
 
-  private LoadGist(gistElement): void{
+  private LoadGist(gistElement): void {
     const iFrame = gistElement;
     const url = NgGistService.getUrl(this.userName, this.gistId, this.fileName);
     iFrame.id = this.GetElementId();
@@ -45,15 +45,15 @@ export class NgGistComponent implements AfterViewInit {
     this.WriteDoc(doc, content);
   }
 
-  private GetElementId(): string{
+  private GetElementId(): string {
     let elementId = `gist-${this.userName}-${this.gistId}`;
-    if(this.fileName.length > 0){
+    if (this.fileName.length > 0) {
       elementId = `gist-${this.userName}-${this.gistId}-${this.fileName}`;
     }
     return elementId;
   }
 
-  private WriteDoc(doc: any, content: string){
+  private WriteDoc(doc: any, content: string) {
     doc.open();
     doc.write(content);
     doc.close();

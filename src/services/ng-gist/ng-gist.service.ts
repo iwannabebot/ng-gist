@@ -13,13 +13,11 @@ export class NgGistService {
    * @param fileName
    */
   public static getUrl(userName: string, gistId: string, fileName?: string): string {
-    if(fileName !== undefined && fileName.length > 0){
+    if (fileName !== undefined && fileName.length > 0) {
       return `https://gist.github.com/${userName}/${gistId}.js?file=${fileName}`;
-    }
-    else{
+    } else {
       return `https://gist.github.com/${userName}/${gistId}.js`;
     }
-      
   }
 
   /**
@@ -28,7 +26,7 @@ export class NgGistService {
    * @param elementId
    */
   public static getGistFrameContent(gistUrl: string, elementId?: string): string {
-    if(elementId !== undefined && elementId.length > 0){
+    if (elementId !== undefined && elementId.length > 0) {
       return `<html>` +
       `<head>` +
       `  <base target="_parent">` +
@@ -38,8 +36,7 @@ export class NgGistService {
       `  <script type="text/javascript" src="${gistUrl}"></script>` +
       `</body>` +
       `</html>`;
-    }
-    else{
+    } else {
       return `<html>` +
       `<head>` +
       `  <base target="_parent">` +
@@ -49,6 +46,5 @@ export class NgGistService {
       `</body>` +
       `</html>`;
     }
-    
   }
 }
