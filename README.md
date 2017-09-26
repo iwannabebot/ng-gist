@@ -2,8 +2,8 @@
 **AOT/JIT** compatible Angular component to embed Gist
 
 [![Build Status](https://travis-ci.org/iwannabebot/ng-gist.svg?branch=master)](https://travis-ci.org/iwannabebot/ng-gist)
-
 [![codecov](https://codecov.io/gh/iwannabebot/ng-gist/branch/master/graph/badge.svg)](https://codecov.io/gh/iwannabebot/ng-gist)
+[![Known Vulnerabilities](https://snyk.io/test/github/iwannabebot/ng-gist/badge.svg)](https://snyk.io/test/github/iwannabebot/ng-gist)
 
 # Quick Start 
 
