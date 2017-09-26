@@ -41,8 +41,13 @@ export class NgGistComponent implements AfterViewInit {
     const url = NgGistService.getUrl(this.userName, this.gistId, this.fileName);
     iFrame.id = this.GetElementId();
     const content = NgGistService.getGistFrameContent(url, this.GetElementId());
-    const doc = iFrame.contentDocument || iFrame.contentElement.contentWindow;
+    const doc = this.GetDocument(gistElement);
     this.WriteDoc(doc, content);
+  }
+
+  private GetDocument(gistElement: ElementRef): any {
+    const elem = gistElement.nativeElement;
+    return elem.contentDocument || elem.contentElement.contentWindow;
   }
 
   private GetElementId(): string {
