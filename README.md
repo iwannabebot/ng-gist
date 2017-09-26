@@ -26,7 +26,14 @@ export class AppModule { }
 ```
  - Use ng-gist template
 
- `<ng-gist userName="iwannabebot"  gistId="134aee6d3a07430e9a1079697e4fc03d"></ng-gist>`
+```<ng-gist userName="iwannabebot"  gistId="134aee6d3a07430e9a1079697e4fc03d" fileName="TestGist2.js"></ng-gist>```
+
+ -- userName: string
+
+ -- gistId:  string
+
+ -- filename: string (optional)
+ 
 
 # Modify this library 
 
