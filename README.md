@@ -9,7 +9,7 @@
 
  - Install this Library
 
-[![NPM](https://nodei.co/npm/ng-gist.png?mini=true)](https://npmjs.org/package/ng-gist)
+[![NPM](https://nodei.co/npm/ng-gist.png?mini=true)](https://npmjs.org/package/ng-gist) [![Greenkeeper badge](https://badges.greenkeeper.io/iwannabebot/ng-gist.svg)](https://greenkeeper.io/)
 
  - Declare NgGistModule in your root module
 
